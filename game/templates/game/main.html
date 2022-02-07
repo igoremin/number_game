@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+    Игра
+{% endblock %}
+
+{% block content %}
+    <div class="main">
+        <h1>Угадай число</h1>
+        <div class="main_btn">
+            <div><button onclick="find_new_game()">Найти игру</button></div>
+            <div><button onclick="document.location='/history/'">Журнал матчей</button></div>
+        </div>
+    </div>
+
+    <div class="search_game-popup" id="popup">
+        <div class="popup-content">
+            <div class="message">
+                <img src='media/loader.gif' height="20px">
+                Поиск соперника...
+            </div>
+            <div class="cancel">
+                <a onclick="stop_wait_game()">Отмена</a>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block scripts %}
+    <script>
+
+    </script>
+{% endblock %}

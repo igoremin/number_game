@@ -1,0 +1,346 @@
+html {
+    background-color: #141124;
+    font-family: 'Roboto', serif;
+}
+
+button {
+    cursor: pointer;
+    padding: 0;
+    border: none;
+    border-radius: 5px;
+}
+
+body, html {
+  width: 100%;
+  /*height: 100%;*/
+  margin: 0;
+}
+
+.main {
+    margin-top: 229px;
+    color: white;
+    text-align: center;
+}
+
+.main h1 {
+    font-weight: bold;
+    font-size: 64px;
+    line-height: 75px;
+}
+
+.main .main_btn {
+    margin-top: 148px;
+}
+
+.main .main_btn button {
+    background: #12B0D2;
+    border-radius: 5px;
+    color: white;
+    width: 374px;
+    height: 52px;
+    margin-bottom: 22px;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 28px;
+    border: none;
+}
+
+.container {
+    width: 1450px;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.left_panel {
+    width: 430px;
+    height: 100%;
+    float: left;
+    color: #FFFFFF;
+    text-align: center;
+    border-right: 20px solid #0D0A1B;
+}
+
+.middle_panel {
+    width: 550px;
+    height: 100%;
+    float: left;
+    text-align: center;
+    position:relative;
+}
+
+.right_panel {
+    width: 430px;
+    height: 100%;
+    color: #ACB2BD;
+    float: right;
+    text-align: center;
+    border-left: 20px solid #0D0A1B;
+}
+
+div.user_name {
+    margin-top: 71px;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 56px;
+}
+
+div.timer {
+    margin-top: 250px;
+    font-size: 96px;
+    font-style: normal;
+    font-weight: bold;
+    line-height: 112px;
+}
+
+div.move {
+    margin-top: 250px;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: bold;
+    line-height: 56px;
+}
+
+.right_panel div.move {
+    margin-bottom: 140px;
+}
+
+div.left_game {
+    margin-bottom: 40px;
+    margin-top: 70px;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 28px;
+    text-decoration-line: underline;
+}
+
+div.left_game a {
+    cursor: pointer;
+}
+
+/*------------*/
+
+#popup{
+    width:100%;
+    min-height:100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    overflow:hidden;
+    position:fixed;
+    top:0;
+    display: none;
+}
+
+#popup .popup-content{
+    margin:300px auto 0px auto;
+    width:400px;
+    height: 300px;
+    padding:10px;
+    border-radius:5px;
+    box-shadow: 0px 0px 10px #000;
+    background: #141124;
+    border: 2px solid #12B0D2;
+    box-sizing: border-box;
+}
+
+#popup .popup-content .message {
+    text-align: center;
+    margin-top: 120px;
+    color: #ACB2BD;
+}
+
+#popup .popup-content .cancel {
+    text-align: center;
+    margin-top: 50px;
+}
+
+#popup .popup-content .cancel a {
+    text-decoration-line: underline;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+#popup .popup-content .game_result_message {
+    text-align: center;
+    margin-top: 60px;
+    color: white;
+    font-weight: bold;
+    font-size: 64px;
+    line-height: 75px;
+}
+
+/*------------*/
+table#game_table {
+    margin-top: 80px;
+    border-collapse: separate;
+    border-spacing: 27px 5px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 28px;
+    color: #FFFFFF;
+}
+
+.center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+div.answer_div {
+    position:absolute;
+    top: 750px;
+}
+
+button.send_answer {
+    margin-bottom: 30px;
+    background: #12B0D2;
+    border-radius: 5px;
+    width: 374px;
+    height: 52px;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 28px;
+    color: #FFFFFF;
+    float: bottom;
+    padding: 0;
+    border: none;
+}
+
+input.answer {
+    margin-bottom: 25px;
+    background: #252340;
+    border-radius: 5px;
+    border: none;
+    width: 370px;
+    height: 52px;
+    font-size: 18px;
+    line-height: 21px;
+    color: #ACB2BD;
+}
+
+/*-----------*/
+
+div.history_main {
+    text-align: center;
+}
+
+table#history_table {
+    color: white;
+    width: 1270px;
+    background: #31295C;
+    text-align: center;
+    border: none;
+}
+
+table#history_table th {
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 28px;
+}
+
+table#history_table tr {
+    height: 61px;
+}
+
+table#history_table tr:nth-child(even) {
+  background-color: #3F3670;
+}
+
+table#history_table td {
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 28px;
+}
+h1.history_name {
+    color: white;
+    margin-top: 100px;
+    font-weight: bold;
+    font-size: 64px;
+    line-height: 75px;
+}
+
+button.go_back_btn {
+    width: 374px;
+    height: 52px;
+    background: #12B0D2;
+    margin-top: 117px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 28px;
+    color: #FFFFFF;
+}
+
+/*---------*/
+
+div.login_register {
+    margin-left: auto;
+    margin-right: auto;
+    /*text-align: center;*/
+    color: white;
+    margin-top: 300px;
+    width: 374px;
+}
+
+div.login_register h1 {
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 28px;
+    /*width: 374px*/
+}
+
+div.login_register span.not_active{
+    color: #768EB0;
+}
+
+div.login_register label {
+    color: #ACB2BD;
+    margin-top: 33px;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 21px;
+}
+
+div.login_register input {
+    background: #252340;
+    border-radius: 5px;
+    border: none;
+    width: 370px;
+    height: 52px;
+    font-size: 18px;
+    line-height: 21px;
+    color: #ACB2BD;
+}
+
+div.login_register div.login {
+    margin-top: 33px;
+}
+
+div.login_register div.password {
+    margin-top: 33px;
+}
+
+div.login_register button {
+    background: #12B0D2;
+    border-radius: 5px;
+    color: white;
+    width: 374px;
+    height: 52px;
+    margin-top: 75px;
+    margin-bottom: 26px;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 28px;
+    border: none;
+    cursor: pointer;
+}
+
+div.login_register div.register {
+    text-align: center;
+}
+
+div.login_register a {
+    font-size: 18px;
+    line-height: 21px;
+    text-decoration-line: underline;
+    color: #12B0D2;
+}

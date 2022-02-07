@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Новая игра
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <div class="left_panel">
+            <div class="user_name">
+                <h1 id="user">{{ user }}</h1>
+            </div>
+            <div class="timer">
+                20
+            </div>
+            <div class="move">
+                Ваш ход
+            </div>
+            <div class="left_game">
+                <a onclick="left_game()">Покинуть игру</a>
+            </div>
+        </div>
+        <div class="middle_panel">
+            <table class="center" id="game_table">
+                <tr class="header">
+                    <th>Ход</th><th>Компьютер</th><th>{{ user }}</th><th>{{ enemy }}</th>
+                </tr>
+            </table>
+            <div class="answer_div">
+                <form method="post" id="answer_form">
+                    {% csrf_token %}
+                    {{ number_form.number }}
+                    <button class="send_answer" type="submit">Угадать</button>
+                </form>
+            </div>
+        </div>
+        <div class="right_panel">
+            <div class="user_name">
+                <h1 id="enemy">{{ enemy }}</h1>
+            </div>
+            <div class="timer">
+                20
+            </div>
+            <div class="move">
+                Ход противника
+            </div>
+        </div>
+    </div>
+
+    <div class="game-popup" id="popup">
+        <div class="popup-content">
+            <div class="game_result_message">
+            </div>
+            <div class="cancel">
+                <a href="/">В главное меню</a>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

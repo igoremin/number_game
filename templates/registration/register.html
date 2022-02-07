@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block login %}
+
+    <div class="login_register">
+        <h1><span class="active">РЕГИСТРАЦИЯ&#160&#160/</span><span class="not_active">&#160&#160АВТОРИЗАЦИЯ</span></h1>
+        <form method="POST">
+            {% csrf_token %}
+            <div class="login">
+                <label for="{{ register_form.username.id_for_label }}">Login</label>
+                <br>
+                {{ register_form.username }}
+                {{ register_form.username.errors }}
+            </div>
+            <div class="password">
+                <label for="{{ register_form.password.id_for_label }}">Password</label>
+                <br>
+                {{ register_form.password }}
+                {{ register_form.password.errors }}
+            </div>
+            <button class="btn btn-primary" type="submit">Зарегистрироваться</button>
+        </form>
+        <div class="register">
+            <p class="text-center">Уже есть аккаунт? <a href="/login">Авторизация</a></p>
+        </div>
+    </div>
+
+
+<!--Register--> 
+{#<div class="container py-5">#}
+{#	<h1>Register</h1>#}
+{#	<form method="POST">#}
+{#		{% csrf_token %}#}
+{#		{{ register_form }}#}
+{#		<button class="btn btn-primary" type="submit">Зарегистрироваться</button>#}
+{#	</form>#}
+{#	<p class="text-center">Уже есть аккаунт? <a href="/login">Авторизоваться</a></p>#}
+{#</div>#}
+
+{% endblock %}

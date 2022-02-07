@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block login %}
+
+    <div class="login_register">
+        <h1><span class="not_active">РЕГИСТРАЦИЯ&#160&#160</span><span class="active">/&#160&#160АВТОРИЗАЦИЯ</span></h1>
+        <form method="POST">
+            {% csrf_token %}
+            <div class="login">
+                <label for="{{ form.username.id_for_label }}">Login</label>
+                <br>
+                {{ form.username }}
+            </div>
+            <div class="password">
+                <label for="{{ form.password.id_for_label }}">Password</label>
+                <br>
+                {{ form.password }}
+            </div>
+            {% if form.errors %}
+                <p>Ваше имя пользователя или пароль не найдены, пожалуйста, повторите попытку.</p>
+            {% endif %}
+
+            <button class="btn btn-primary" type="submit">Авторизоваться</button>
+            <input type="hidden" name="next" value="{{ next }}" />
+        </form>
+        <div class="register">
+            <p class="text-center">Нет аккаунта? <a href="/register">Регистрация</a></p>
+        </div>
+    </div>
+
+{% endblock %}

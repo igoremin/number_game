@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    История игр
+{% endblock %}
+
+{% block content %}
+    <div class="history_main">
+        <h1 class="history_name">История матчей</h1>
+        <table id="history_table" class="center" cellspacing="0" cellpadding="0">
+            <tr>
+                <th>Дата</th><th>Соперник</th><th>Исход игры</th>
+            </tr>
+            {% for game in games %}
+                <tr>
+                    <td>{{ game.date }}</td>
+                    <td>{{ game.enemy }}</td>
+                    <td style="color:
+                            {% if game.result == 'Поражение' %}
+                                #F15454
+                            {% elif game.result == 'Победа'%}
+                                #68EC5C
+                            {% else %}
+                                #6993FF
+                            {% endif %}"
+                    >{{ game.result }}</td>
+                </tr>
+            {% endfor %}
+        </table>
+        <button class="go_back_btn" onclick="history.back()">Назад</button>
+    </div>
+
+{% endblock %}

@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+{#    <link rel="stylesheet" href="{% static 'game/style/bootstrap.min.css' %}">#}
+    <link rel="stylesheet" href="{% static 'game/style/game.css' %}">
+    <title>
+        {% block title %}
+            Игра
+        {% endblock %}
+    </title>
+</head>
+<body>
+<div class="h-100" id="main_div">
+    {% block main %}
+
+    {% endblock %}
+
+    {% block content %}
+
+    {% endblock %}
+
+    {% block login %}
+
+    {% endblock %}
+</div>
+<script src="{% static 'game/scripts/jquery-3.4.1.js' %}"></script>
+{#<script src="{% static 'db_site/scripts/mark.js' %}"></script>#}
+<script src="{% static 'game/scripts/game.js' %}"></script>
+{% block scripts %}
+
+{% endblock %}
+</body>
